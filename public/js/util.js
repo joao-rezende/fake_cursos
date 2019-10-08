@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1/curso_codeigniter/";
+const BASE_URL = "http://127.0.0.1/fake_cursos/";
 
 function clearErrors() {
 	$(".has-error").removeClass("has-error");
