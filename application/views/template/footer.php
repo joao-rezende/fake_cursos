@@ -1,6 +1,6 @@
 		<footer>
 			<div class="container text-center">
-				<p>Designed by <a href="http://moozthemes.com"><span>MOOZ</span>Themes.com</a></p>
+				<p>Desenvolvido por <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-soares-rezende-725688194/"><span>João Vitor S. Rezende</span></a> | Template de <a href="http://moozthemes.com"><span>MOOZ</span>Themes.com</a></p>
 			</div>
 		</footer>
 
