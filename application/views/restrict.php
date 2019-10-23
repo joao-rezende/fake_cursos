@@ -28,7 +28,9 @@
                 <div id="tab_courses" class="tab-pane active">
                     <div class="container-fluid">
                         <h2 class="text-center"><strong>Gerenciar Cursos</strong></h2>
-                        <a id="btn_add_course" class="btn btn-danger"><i class="fa fa-plus"></i> Adicionar Curso</a>
+                        <a id="btn_add_course" class="btn btn-danger" data-toggle="modal" data-target="#modal_course">
+                            <i class="fa fa-plus"></i> Adicionar Curso
+                        </a>
 
                         <table id="dt_courses" class="table table-striped table-bordered table-restrict">
                             <thead>
@@ -87,3 +89,59 @@
         </div>
     </div><!-- /.container -->
 </section>
+
+<div id="modal_course" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h4 class="modal-title">Cursos</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="form_course">
+                    <input name="course_id" type="hidden">
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Nome</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="course_name" name="course_name" class="form-control" maxlength="100">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Imagem</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="course_img" name="course_img" class="form-control" type="file" accept="image/*">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Duração</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="course_duration" name="course_duration" class="form-control" type="number" min="0">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Descrição</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <textarea id="course_description" name="course_description" class="form-control"></textarea>
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button id="btn_save_couse" type="submit" class="btn btn-danger">
+                            <i class="fa fa-save"></i> Salvar
+                        </button>
+                        <span class="help-block"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
