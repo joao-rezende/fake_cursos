@@ -50,7 +50,7 @@
                 <div id="tab_team" class="tab-pane">
                     <div class="container-fluid">
                         <h2 class="text-center"><strong>Gerenciar Equipe</strong></h2>
-                        <a id="btn_add_member" class="btn btn-danger"><i class="fa fa-plus"></i> Adicionar Membro</a>
+                        <a id="btn_add_member" class="btn btn-danger" data-toggle="modal" data-target="#modal_member"><i class="fa fa-plus"></i> Adicionar Membro</a>
 
                         <table id="dt_team" class="table table-striped table-bordered table-restrict">
                             <thead>
@@ -69,7 +69,7 @@
                 <div id="tab_user" class="tab-pane">
                     <div class="container-fluid">
                         <h2 class="text-center"><strong>Gerenciar Usuários</strong></h2>
-                        <a id="btn_add_user" class="btn btn-danger"><i class="fa fa-plus"></i> Adicionar Usuários</a>
+                        <a id="btn_add_user" class="btn btn-danger" data-toggle="modal" data-target="#modal_user"><i class="fa fa-plus"></i> Adicionar Usuários</a>
 
                         <table id="dt_users" class="table table-striped table-bordered table-restrict">
                             <thead>
@@ -95,7 +95,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">x</button>
-                <h4 class="modal-title">Cursos</h4>
+                <h4 class="modal-title">Curso</h4>
             </div>
 
             <div class="modal-body">
@@ -136,6 +136,126 @@
 
                     <div class="form-group text-center">
                         <button id="btn_save_couse" type="submit" class="btn btn-danger">
+                            <i class="fa fa-save"></i> Salvar
+                        </button>
+                        <span class="help-block"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal_member" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h4 class="modal-title">Membro</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="form_member">
+                    <input name="member_id" type="hidden">
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Nome</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="member_name" name="member_name" class="form-control" maxlength="100">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Foto</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="member_photo" name="member_photo" class="form-control" type="file" accept="image/*">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Descrição</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <textarea id="member_description" name="member_description" class="form-control"></textarea>
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button id="btn_save_member" type="submit" class="btn btn-danger">
+                            <i class="fa fa-save"></i> Salvar
+                        </button>
+                        <span class="help-block"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal_user" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h4 class="modal-title">Usuário</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="form_user">
+                    <input name="user_id" type="hidden">
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Login</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="user_login" name="user_login" class="form-control" maxlength="30">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Nome completo</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="user_full_name" name="user_full_name" class="form-control" maxlength="100">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">E-mail</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="user_email" name="user_email" class="form-control" maxlength="100" type="email">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Confirmar e-mail</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="user_email_confirm" name="user_email_confirm" class="form-control" maxlength="100" type="email">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Senha</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="user_password" name="user_password" class="form-control" type="password">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-lg-2 control-label">Confirmar senha</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input id="user_password_confirm" name="user_password_confirm" class="form-control" type="password">
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button id="btn_save_user" type="submit" class="btn btn-danger">
                             <i class="fa fa-save"></i> Salvar
                         </button>
                         <span class="help-block"></span>
